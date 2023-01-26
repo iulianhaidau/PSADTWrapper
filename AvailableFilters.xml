@@ -1,0 +1,37 @@
+<Filters>
+	<filter>
+		<name>default</name>
+		<help>default help</help>
+		<fil>default filter</fil>
+	</filter>
+	<filter>
+		<name>FileExist</name>
+		<help>Check if %File% Exist</help>
+		<fil>Test-Path -Name %File%</fil>
+	</filter>
+	<filter>
+		<name>FolderExist</name>
+		<help>Check if %Folder% Exist</help>
+		<fil>Test-Path -Name %Folder%</fil>
+	</filter>
+	<filter>
+		<name>HostNameIs</name>
+		<help>Check if %HostName% is</help>
+		<fil>$env:ComputerName -eq "%HostName%"</fil>
+	</filter>
+	<filter>
+		<name>IPAdressIs</name>
+		<help>Check if %HostIPAddress% is</help>
+		<fil>(Get-NetIPAddress -AddressFamily IPV4).IpAddress -like "*%HostIPAddress%*")</fil>
+	</filter>
+	<filter>
+		<name>CurrentUserNameIs</name>
+		<help>Check if %CurrentUserName% is</help>
+		<fil>$env:UserName -eq "%CurrentUserName%"</fil>
+	</filter>
+	<filter>
+		<name>UserDomainIs</name>
+		<help>Check if %UserDomain% is</help>
+		<fil>$env:UserDomain -eq "%UserDomain%"</fil>
+	</filter>
+</Filters>
